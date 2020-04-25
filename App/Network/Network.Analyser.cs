@@ -148,7 +148,7 @@ namespace App
                     opcode != 0x006F &&
                     opcode != 0x0121 &&
                     opcode != 0x0165 &&
-                    opcode != 0x022F &&
+                    opcode != 0x0161 &&
                     // v5.1
                     opcode != 0x008F && 
                     opcode != 0x00AE &&
@@ -170,7 +170,7 @@ namespace App
 
                 var data = message.Skip(32).ToArray();
 
-                if (opcode == 0x022F)
+                if (opcode == 0x0161)
                 {
                     var code = BitConverter.ToInt16(data, 4);
                     var type = data[8];
